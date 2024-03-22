@@ -2,7 +2,6 @@
   "headers": [
     {
       "source": "/api/(.*)",
-      "maxDuration": 30，
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
@@ -16,5 +15,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/**": {
+      "maxDuration": 30
+    }
+  }
 }
